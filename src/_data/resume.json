@@ -1,9 +1,7 @@
 {
-    "summary": {
-        "name": "Amy Churchwell",
-        "title": "Front End Software Engineer",
-        "description": "User-centric front end software engineer with experience working on large-scale projects on distributed teams. Passionate about open source, accessibility, and web performance."
-    },
+    "name": "Amy Churchwell",
+    "title": "Front End Software Engineer",
+    "description": "User-centric front end software engineer with experience working on large-scale projects on distributed teams. Passionate about open source, accessibility, and web performance.",
     "technologies": [
         "HTML",
         "CSS",
@@ -31,26 +29,29 @@
             "company": "Mozilla",
             "role": "Front End Software Engineer",
             "startDate": 2018,
-            "highlights": [
+            "projects": [
                 {
                     "title": "Firefox Desktop",
                     "description": "Firefox is a privacy-focused open source web browser. Supported on Mac, Windows, and Linux.",
-                    "highlights": []
+                    "details": [
+                        "this",
+                        "that"
+                    ]
                 },
                 {
                     "title": "mozilla.org",
                     "description": "mozilla.org is a large-scale, open-source Django web application that serves millions of users each day.",
-                    "highlights": []
+                    "details": []
                 },
                 {
                     "title": "Conversion Rate Optimization",
                     "description": "",
-                    "highlights": []
+                    "details": []
                 },
                 {
                     "title": "Protocol Design System",
                     "description": "protocol.mozilla.org is Mozilla’s modular web design system. Node.js platform, published to NPM.",
-                    "highlights": []
+                    "details": []
                 }
             ]
         },
