@@ -1,0 +1,14 @@
+@import url('/style.css');
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 60ch;
+    margin: auto;
+}
+
+.technologies li {
+    list-style: none;
+    display: inline-block;
+}
