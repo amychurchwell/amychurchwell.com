@@ -4,14 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amychurchwell/amychurchwell.com.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amychurchwell/amychurchwell.com/issues"
+  },
+  "homepage": "https://github.com/amychurchwell/amychurchwell.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "sass": "^1.49.9"
+    "prettier": "2.6.1"
   },
   "dependencies": {}
 }

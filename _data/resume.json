@@ -1,0 +1,101 @@
+{
+    "summary": {
+        "name": "Amy Churchwell",
+        "title": "Front End Software Engineer",
+        "description": "User-centric front end software engineer with experience working on large-scale projects on distributed teams. Passionate about open source, accessibility, and web performance."
+    },
+    "technologies": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "Less",
+        "JavaScript ES6",
+        "React",
+        "Redux",
+        "Angular",
+        "jQuery",
+        "Django",
+        "Git",
+        "Mercurial",
+        "Gulp",
+        "Webpack",
+        "Node.js",
+        "Typescript",
+        "Karma",
+        "Jasmine",
+        "Mocha",
+        "Selenium"
+    ],
+    "experience": [
+        {
+            "company": "Mozilla",
+            "role": "Front End Software Engineer",
+            "startDate": 2018,
+            "highlights": [
+                {
+                    "title": "Firefox Desktop",
+                    "description": "Firefox is a privacy-focused open source web browser. Supported on Mac, Windows, and Linux.",
+                    "highlights": []
+                },
+                {
+                    "title": "mozilla.org",
+                    "description": "mozilla.org is a large-scale, open-source Django web application that serves millions of users each day.",
+                    "highlights": []
+                },
+                {
+                    "title": "Conversion Rate Optimization",
+                    "description": "",
+                    "highlights": []
+                },
+                {
+                    "title": "Protocol Design System",
+                    "description": "protocol.mozilla.org is Mozilla’s modular web design system. Node.js platform, published to NPM.",
+                    "highlights": []
+                }
+            ]
+        },
+        {
+            "company": "Pancake Creative",
+            "role": "Front End Web Developer",
+            "startDate": 2018,
+            "endDate": 2018,
+            "highlights": [
+                "Refactored legacy Angular application to React. Used Redux for state management.",
+                "Delivered reusable components and stateful app features reflecting brand guidelines and user stories."
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "org": "Women Who Code",
+            "role": "Front End Web Developer",
+            "startDate": 2018,
+            "endDate": 2020,
+            "highlights": [
+                "Spearheaded development of maintainable and performant React codebase from the ground-up.",
+                "Triaged and mentored bugs, helping foster the local open source community."
+            ]
+        }
+    ]
+    "education": [
+        {
+            "school": "Epicodus",
+            "startDate": 2017,
+            "endDate": 2018,
+            "description": "Vocational school for programmers. Specialized in Front End Web Development."
+        },
+        {
+            "school": "University of West Florida",
+            "startDate": 2012,
+            "endDate": 2013,
+            "description": "BA, Graphic Design."
+        },
+        {
+            "school": "School of Visual Arts",
+            "startDate": 2011,
+            "endDate": 2012,
+            "description": "BFA Graphic Design courses."
+        }
+    ]
+}
+
