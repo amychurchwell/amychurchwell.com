@@ -1,5 +1,25 @@
 @import url('/normalize.css');
 
+/* custom properties */
+:root {
+    --background: #1f211e;
+    --text: #efd3d7;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: monospace;
+    color: var(--text);
+    background: var(--background);
+}
+
+main.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    max-width: 60ch;
+    margin: auto;
+}
+
+a {
+    color: var(--text);
 }
