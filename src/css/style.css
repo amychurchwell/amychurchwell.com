@@ -9,7 +9,9 @@
 body {
     font-family: monospace;
     color: var(--text);
-    background: var(--background);
+    background-color: var(--background);
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 main.container {
@@ -21,7 +23,8 @@ main.container {
 }
 
 header {
-    border: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+    max-height: 30ch;
 }
 
 a {

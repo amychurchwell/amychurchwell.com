@@ -25,6 +25,7 @@
     "homepage": "https://github.com/amychurchwell/amychurchwell.com#readme",
     "devDependencies": {
         "@11ty/eleventy": "^1.0.0",
+        "dotenv": "^16.0.0",
         "node-fetch": "^2.6.7",
         "prettier": "2.6.1"
     }

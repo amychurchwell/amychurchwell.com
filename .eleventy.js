@@ -1,5 +1,6 @@
 const fs = require('fs')
 const NOT_FOUND_PATH = 'public/404.html'
+require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
