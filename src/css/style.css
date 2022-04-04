@@ -20,6 +20,10 @@ main.container {
     margin: auto;
 }
 
+header {
+    border: 1px solid var(--text);
+}
+
 a {
     color: var(--text);
 }
