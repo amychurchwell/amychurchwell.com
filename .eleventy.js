@@ -1,5 +1,5 @@
 const fs = require('fs')
-const NOT_FOUND_PATH = 'public/404.html'
+const NOT_FOUND_PATH = '_site/404.html'
 require('dotenv').config()
 
 module.exports = function (eleventyConfig) {
@@ -26,16 +26,20 @@ module.exports = function (eleventyConfig) {
         },
     })
 
-    eleventyConfig.addPassthroughCopy('./src/css/')
-    eleventyConfig.addWatchTarget('./src/css/')
+    eleventyConfig.addPassthroughCopy('./src/css/');
+    eleventyConfig.addWatchTarget('./src/css/');
 
-    eleventyConfig.addPassthroughCopy('./src/img/')
-    eleventyConfig.addWatchTarget('./src/img/')
+    eleventyConfig.addPassthroughCopy('./src/img/');
+    eleventyConfig.addWatchTarget('./src/img/');
+
+    eleventyConfig.addShortcode("year", function(date) {
+        return `${new Date().getFullYear()}`
+    });
 
     return {
         dir: {
             input: 'src',
-            output: 'public',
+            output: '_site',
         },
     }
 }

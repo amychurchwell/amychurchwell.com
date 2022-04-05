@@ -9,15 +9,33 @@
         <title>{{ title }}</title>
     </head>
 
-    <body style="background-image: url({{ mars.img }})">
-        <header>
+    <body>
+        <header>Hello, welcome to my website.</header>
+        <main class="container">
+
+            <p>
+                My name is Amy, I’m a {{ resume.title }}. I’ve been working at
+                {{ resume.experience[0].company }} since
+                {{ resume.experience[0].startDate }}. {% year %}
+            </p>
+
+            {% if github.commit %}
+            <section class="github-commit">
+                <p>latest site commit:</p>
+                <date>{{ github.commit.date }}</date>
+                <p>“{{ github.commit.msg }}” - {{ github.commit.author }}</p>
+            </section>
+            {% endif %}
+        </main>
+        <!-- if mars -> <aside>
+            <img src="{{ mars.img }}">
             <ul>
                 <li>{{ mars.rover }}</li>
                 <li><date>{{ mars.date }}</date></li>
             </ul>
-        </header>
-        <main class="container">
-            {{ content | safe }}
-        </main>
+        </aside> -->
+        <footer>
+            2012 - {% year %}
+        </footer>
     </body>
 </html>
