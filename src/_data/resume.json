@@ -33,10 +33,7 @@
                 {
                     "title": "Firefox Desktop",
                     "description": "Firefox is a privacy-focused open source web browser. Supported on Mac, Windows, and Linux.",
-                    "details": [
-                        "this",
-                        "that"
-                    ]
+                    "details": ["this", "that"]
                 },
                 {
                     "title": "mozilla.org",
