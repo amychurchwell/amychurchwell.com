@@ -8,7 +8,7 @@
         <title>{{ title }}</title>
     </head>
     <body>
-        <main itemscope itemtype="http://schema.org/Person">
+        <main itemscope itemtype="http://schema.org/Person" class="container">
             <header>
                 <h1>{{ resume.name | title }}</h1>
                 <p>{{ resume.description }}</p>
@@ -25,7 +25,14 @@
                 <h2>Experience</h2>
                 {% for experience in resume.experience %}
                     <h3>{{ experience.role | title }} - {{ experience.company | title }}</h3>
-                    <date>{{ experience.startDate }}</date>
+                    <date>
+                        {{ experience.startDate }}
+                        {% if experience.endDate > experience.startDate %}
+                            - {{ experience.endDate }}
+                        {% else %}
+                            - Present
+                        {% endif %}
+                    </date>
                     <ul>
                         {% for highlights in experience.highlights %}
                             <li>

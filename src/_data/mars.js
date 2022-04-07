@@ -10,11 +10,13 @@ module.exports = async function () {
     img_src = json.latest_photos[0].img_src;
     date = json.latest_photos[0].earth_date;
     rover = json.latest_photos[0].rover.name;
+    cam = json.latest_photos[0].camera.full_name;
 
     return {
       img: img_src,
       date: date,
-      rover: rover
+      rover: rover,
+      cam: cam,
     };
   } catch (e) {
     console.log("Failed getting Mars JSON, returning 0");

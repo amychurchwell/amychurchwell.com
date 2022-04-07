@@ -1,0 +1,31 @@
+ ┌────────────── ∘°∘♡∘°∘ ──────────────┐
+    Hello there!
+    Thank you for taking an interest in
+    my humble website. Stumbled acrosss
+    https://humanstxt.org/ & felt
+    inspired to do the same on my own
+    site.
+ └────────────── °∘∘♡∘∘° ──────────────┘
+
+/* TEAM */
+(team of one lol)
+
+	Author: Amy Churchwell
+	Contact: amy [at] churchwell.im
+	Twitter: @amychurchwell
+    Github: amychurchwell
+	Coded from: Portland, Oregon. USA.
+
+/* SITE */
+	Language: English
+	Doctype: HTML5
+	Editor: VSCode
+
+/* RESOURCES */
+    Static Site Generator: https://www.11ty.dev/
+    Pixel art software: https://www.aseprite.org/
+    NASA APIs: https://api.nasa.gov/
+    MDN: https://developer.mozilla.org/
+
+/* THANKS */
+    - Chris C Cerami for maintaining the Mars Rover Photo API, https://github.com/chrisccerami/mars-photo-api

@@ -7,11 +7,12 @@
 }
 
 body {
-    font-family: monospace;
+    font: 0.9em monospace;
+    line-height: 1.5;
     color: var(--text);
     background-color: var(--background);
     border: 1px solid var(--text);
-    max-width: 60ch;
+    max-width: 70ch;
     margin: 15px auto;
     display: flex;
     flex-flow: column wrap;
@@ -24,15 +25,28 @@ header {
 
 .container {
     padding: 15px;
+    border-bottom: 1px solid var(--text);
 }
 
 a {
     color: var(--text);
 }
 
+/*-- Mars Photo --*/
+
 .mars-rover table {
     max-width: 60ch;
     overflow: auto;
+    margin: 0 auto;
+}
+
+.mars-rover thead {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+.mars-rover tbody {
+    text-align: left;
 }
 
 .mars-rover img {

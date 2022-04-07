@@ -1,0 +1,28 @@
+<section class="mars-rover">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Recent Mars Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <img src="{{ mars.img }}" alt="Photograph from the {{ mars.cam }} on the {{ mars.rover }} Mars rover." loading="lazy"/>
+                </td>
+            </tr>
+            <tr>
+                <th>rover:</th>
+                <td>{{ mars.rover}}</td>
+            </tr>
+            <tr>
+                <th>date:</th>
+                <td>{{ mars.date }}</td>
+            </tr>
+            <tr>
+                <th>camera:</th>
+                <td>{{ mars.cam }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
