@@ -14,6 +14,6 @@
             </p>
             {% endblock %}
         </main>
-        {% include "mars.html" %}
+        {% if mars %} {% include "mars.html" %} {% endif %}
     </body>
 </html>
