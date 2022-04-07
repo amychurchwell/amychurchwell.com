@@ -12,30 +12,44 @@
     <body>
         <header>Hello, welcome to my website.</header>
         <main class="container">
-
             <p>
-                My name is Amy, I’m a {{ resume.title }}. I’ve been working at
+                My name is Amy. I’m a {{ resume.title }}. I’ve been working at
                 {{ resume.experience[0].company }} since
                 {{ resume.experience[0].startDate }}. {% year %}
             </p>
 
-            {% if github.commit %}
+            <!-- {% if github.commit %}
             <section class="github-commit">
                 <p>latest site commit:</p>
                 <date>{{ github.commit.date }}</date>
                 <p>“{{ github.commit.msg }}” - {{ github.commit.author }}</p>
             </section>
-            {% endif %}
+            {% endif %} -->
         </main>
-        <!-- if mars -> <aside>
-            <img src="{{ mars.img }}">
-            <ul>
-                <li>{{ mars.rover }}</li>
-                <li><date>{{ mars.date }}</date></li>
-            </ul>
-        </aside> -->
-        <footer>
-            2012 - {% year %}
-        </footer>
+
+        <section class="mars-rover">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Recent Mars Photo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="{{ mars.img }}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>rover:</td>
+                        <td>{{ mars.rover}}</td>
+                    </tr>
+                    <tr>
+                        <td>date:</td>
+                        <td>{{ mars.date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </body>
 </html>

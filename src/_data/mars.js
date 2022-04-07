@@ -7,13 +7,9 @@ module.exports = async function () {
   return fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=" + process.env.NASA_KEY)
     .then(res => res.json())
     .then(json => {
-      for (let i = 0; i < json.latest_photos.length; i++) {
-        if (json.latest_photos[i].camera.name == "NAVCAM") {
-          img_src = json.latest_photos[i].img_src;
-          date = json.latest_photos[i].earth_date;
-          rover = json.latest_photos[i].rover.name;
-        }
-      }
+      img_src = json.latest_photos[0].img_src;
+      date = json.latest_photos[0].earth_date;
+      rover = json.latest_photos[0].rover.name;
       return {
         img: img_src,
         date: date,

@@ -16,18 +16,25 @@ body {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    padding: 15px;
 }
 
-/* header {
-    border: 1px dotted red;
-} */
+header {
+    border-bottom: 1px solid var(--text);
+}
 
-aside {
-    border: 1px dotted var(--text);
-    max-height: 30ch;
+.container {
+    padding: 15px;
 }
 
 a {
     color: var(--text);
+}
+
+.mars-rover table {
+    max-width: 60ch;
+    overflow: auto;
+}
+
+.mars-rover img {
+    max-width: 100%;
 }
