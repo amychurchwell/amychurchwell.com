@@ -1,4 +1,4 @@
 ---
 title: hello world
-layout: 'base.njk'
+layout: 'base.html'
 ---

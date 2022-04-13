@@ -32,8 +32,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/img/');
   eleventyConfig.addWatchTarget('./src/img/');
 
-  eleventyConfig.addShortcode("year", function (date) {
-    return `${new Date().getFullYear()}`
+  eleventyConfig.addPairedShortcode('year', function (date) {
+    const currentYear = new Date().getFullYear();
+    let result = currentYear - date;
+    result.toString();
+    return `${ result }`;
   });
 
   return {

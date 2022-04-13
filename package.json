@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "serve": "eleventy --serve",
+        "serve": "npx @11ty/eleventy --serve",
         "build": "npx @11ty/eleventy",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "./node_modules/karma/bin/karma start"
     },
     "prettier": {
         "trailingComma": "es5",
@@ -27,7 +27,12 @@
     "devDependencies": {
         "@11ty/eleventy": "^1.0.0",
         "dotenv": "^16.0.0",
-        "editorconfig": "^0.15.3"
+        "editorconfig": "^0.15.3",
+        "jasmine-core": "^4.0.1",
+        "karma": "^6.3.17",
+        "karma-chrome-launcher": "^3.1.1",
+        "karma-firefox-launcher": "^2.1.2",
+        "karma-jasmine": "^4.0.2"
     },
     "dependencies": {
         "@11ty/eleventy-fetch": "^3.0.0"

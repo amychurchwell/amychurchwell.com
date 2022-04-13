@@ -9,23 +9,23 @@
             <tr>
                 <td colspan="2">
                     <img
-                        src="{{ mars.img }}"
-                        alt="Photograph from the {{ mars.cam }} on the {{ mars.rover }} Mars rover."
+                        src="{{ mars.img_src }}"
+                        alt="Photograph from the {{ mars.camera.full_name }} on the {{ mars.rover.name }} Mars rover."
                         loading="lazy"
                     />
                 </td>
             </tr>
             <tr>
                 <th>rover:</th>
-                <td>{{ mars.rover}}</td>
+                <td>{{ mars.rover.name }}</td>
             </tr>
             <tr>
                 <th>date:</th>
-                <td>{{ mars.date }}</td>
+                <td>{{ mars.earth_date }}</td>
             </tr>
             <tr>
                 <th>camera:</th>
-                <td>{{ mars.cam }}</td>
+                <td>{{ mars.camera.full_name }}</td>
             </tr>
         </tbody>
     </table>

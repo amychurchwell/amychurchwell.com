@@ -12,17 +12,10 @@ module.exports = async function () {
     rover = json.latest_photos[0].rover.name;
     cam = json.latest_photos[0].camera.full_name;
 
-    return {
-      img: img_src,
-      date: date,
-      rover: rover,
-      cam: cam,
-    };
+    return json.latest_photos[0];
+
   } catch (e) {
-    console.log("Failed getting Mars JSON, returning 0");
-    return {
-      date: "XX/XX/XXXX",
-      rover: "Failed to retrieve."
-    };
+    console.log("Failed getting Mars JSON");
+    return "Failed to retrieve.";
   }
 };

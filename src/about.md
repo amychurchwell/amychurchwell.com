@@ -1,4 +1,4 @@
 ---
-title: about me
+title: about
 layout: 'about.njk'
 ---

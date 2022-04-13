@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "head.html" %}
+    <body>
+        <header>
+            {% block header %}
+            <h1>hello, welcome to my website.</h1>
+            {% endblock %}
+        </header>
+        <!-- <nav aria-labelledby="nav-header">
+            <h2 id="nav-header">website navigation.</h2>
+        </nav> -->
+        <main class="container">
+            {% block content %}
+            <article>
+                <p>
+                    My name is Amy. I’m a {{ resume.title }}. I’ve been working
+                    at {{ resume.experience[0].company }} since {{ resume.experience[0].startDate }}
+                    (approximately {% year %}{{ resume.experience[0].startDate }}{% endyear %} years).
+                </p>
+            </article>
+            {% endblock %}
+        </main>
+        <!-- {%- if mars %} {% include "mars.html" %} {%- endif %} -->
+        <footer>
+            <small>HTML is cool.</small>
+        </footer>
+    </body>
+</html>
