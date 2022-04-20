@@ -4,24 +4,28 @@
     <body>
         <header>
             {% block header %}
-            <h1>hello, welcome to my website.</h1>
+            <h1>{{ title }}</h1>
             {% endblock %}
         </header>
-        <!-- <nav aria-labelledby="nav-header">
-            <h2 id="nav-header">website navigation.</h2>
-        </nav> -->
-        <main class="container">
+        {% block nav %}
+        <nav aria-labelledby="nav-header">
+            <h2 id="nav-header" class="visually-hidden">website navigation.</h2>
+            <ul>
+                {%- for webpage in collections.all -%}
+                <li>
+                    <a href="{{ webpage.url | url }}" {% if page.url == webpage.url %} aria-current="page"{% endif %}>
+                        {{ webpage.data.title }}
+                    </a>
+                </li>
+                {%- endfor -%}
+            </ul>
+        </nav>
+        {% endblock %}
+        <main>
             {% block content %}
-            <article>
-                <p>
-                    My name is Amy. I’m a {{ resume.title }}. I’ve been working
-                    at {{ resume.experience[0].company }} since {{ resume.experience[0].startDate }}
-                    (approximately {% year %}{{ resume.experience[0].startDate }}{% endyear %} years).
-                </p>
-            </article>
+                {{ content | safe }}
             {% endblock %}
         </main>
-        <!-- {%- if mars %} {% include "mars.html" %} {%- endif %} -->
         <footer>
             <small>HTML is cool.</small>
         </footer>

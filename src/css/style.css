@@ -1,4 +1,4 @@
-@import url('/normalize.css');
+@import url('normalize.css');
 
 /* custom properties */
 :root {
@@ -11,8 +11,7 @@ body {
     line-height: 1.5;
     color: var(--text);
     background-color: var(--background);
-    border: 1px solid var(--text);
-    max-width: 70ch;
+    max-width: 80ch;
     margin: 15px auto;
     display: flex;
     flex-flow: column wrap;
@@ -23,13 +22,47 @@ header {
     border-bottom: 1px solid var(--text);
 }
 
-.container {
-    padding: 15px;
-    border-bottom: 1px solid var(--text);
+/* site navigation */
+
+[aria-current="page"] {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+nav li::before {
+    content: "\2500";
+}
+
+nav li::marker {
+    content: "\251C";
+}
+
+nav li:last-child::marker {
+    content: "\2514";
 }
 
 a {
     color: var(--text);
+}
+
+/*-- resume --*/
+
+.technologies li {
+    list-style: none;
+    display: inline-block;
+}
+
+/*-- a11y hidden --*/
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 /*-- Mars Photo --*/

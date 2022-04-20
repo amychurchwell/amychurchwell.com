@@ -1,4 +1,8 @@
 ---
 title: about
-layout: 'about.njk'
+layout: 'base.html'
 ---
+
+hello
+
+<!-- {%- if mars %} {% include "mars.html" %} {%- endif %} -->
