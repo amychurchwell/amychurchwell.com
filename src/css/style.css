@@ -7,15 +7,17 @@
 }
 
 body {
-    font: 0.9em monospace;
-    line-height: 1.5;
-    color: var(--text);
     background-color: var(--background);
-    max-width: 80ch;
-    margin: 15px auto;
+    color: var(--text);
     display: flex;
     flex-flow: column wrap;
+    font: 0.9em monospace;
     justify-content: center;
+    line-height: 1.5;
+    margin: 15px auto;
+    max-width: 80ch;
+    padding: 0 15px;
+    position: relative;
 }
 
 header {
@@ -50,6 +52,13 @@ a {
 .technologies li {
     list-style: none;
     display: inline-block;
+}
+
+.notice {
+    padding: 5px 10px;
+    border: 1px solid cyan;
+    color: cyan;
+    max-width: 50ch;
 }
 
 /*-- a11y hidden --*/

@@ -5,10 +5,8 @@ layout: 'base.html'
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/Person" id="resume">
-    <header>
-        <h1>{{ resume.name | title }}</h1>
-        <p>{{ resume.description }}</p>
-    </header>
+    <h1>{{ resume.name | title }}</h1>
+    <p>{{ resume.description }}</p>
     <section class="technologies">
         <h2>Technologies</h2>
         <ul>

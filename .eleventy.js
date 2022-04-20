@@ -16,6 +16,10 @@ module.exports = function (eleventyConfig) {
     return `${ result }`;
   });
 
+  eleventyConfig.addCollection("navigation", function(collectionApi) {
+    return collectionApi.getFilteredByGlob(["./src/*.md", "./src/*.njk"]);
+  });
+
   return {
     dir: {
       input: 'src',
