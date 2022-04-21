@@ -33,22 +33,39 @@
                 {
                     "title": "Firefox Desktop",
                     "description": "Firefox is a privacy-focused open source web browser. Supported on Mac, Windows, and Linux.",
-                    "details": ["this", "that"]
+                    "details": [
+                      "Entered existing codebase to take sole ownership in a large, in-progress redesign of Firefox’s New Tab Page, a surface that supports ~400 million daily sessions. Using React, Redux, Sass, Mocha.",
+                      "Partnered with product management, QA, UX and content designers to develop and execute a roadmap that balanced new features with ongoing product quality work.",
+                      "Triaged and tracked bugs using Bugzilla and Jira.",
+                      "Participant in diversity & inclusion initiative, Mozilla Inclusion Champions, which directly informed Mozilla’s engineering hiring and promotion practices.",
+                      "Refactored large parts of the Firefox front end to support new theming features."
+                    ]
                 },
                 {
                     "title": "mozilla.org",
                     "description": "mozilla.org is a large-scale, open-source Django web application that serves millions of users each day.",
-                    "details": []
+                    "details": [
+                      "Balanced fast-paced feature building with the maintenance and technical roadmapping of a long-term project.",
+                      "Wrote functional tests with Selenium and pytest. Behavioral unit tests with Jasmine and Karma.",
+                      "Used progressive enhancement best practices for cross-browser compatibility. Enhanced support for  IE10+, with basic support for IE9 and below.",
+                      "Mentored and onboarded junior developers."
+                    ]
                 },
                 {
                     "title": "Conversion Rate Optimization",
                     "description": "",
-                    "details": []
+                    "details": [
+                      "Led engineering on the Conversion Rate Optimization team, experiments deployed within the first 6 months predicted to earn an additional 2.54 million desktop downloads per year.",
+                      "Collaborated with product engineering teams to deliver in-house JavaScript A/B testing platforms on multiple Mozilla web properties."
+                    ]
                 },
                 {
                     "title": "Protocol Design System",
                     "description": "protocol.mozilla.org is Mozilla’s modular web design system. Node.js platform, published to NPM.",
-                    "details": []
+                    "details": [
+                      "Built responsive and accessible web components using Sass CSS preprocessing.",
+                      "Wrote cross-browser compatible JavaScript with unit tests."
+                    ]
                 }
             ]
         },
