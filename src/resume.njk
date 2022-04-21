@@ -4,50 +4,57 @@ layout: 'base.html'
 ---
 
 {% block content %}
-<article itemscope itemtype="http://schema.org/Person" id="resume">
-    <h1>{{ resume.name | title }}</h1>
-    <p>{{ resume.description }}</p>
+<article
+    itemscope
+    itemtype="http://schema.org/Person"
+    id="resume"
+    class="h-resume"
+>
+    <h1 class="p-name">{{ resume.name | title }}</h1>
+    <p class="p-summary">{{ resume.description }}</p>
     <section class="technologies">
         <h2>Technologies</h2>
         <ul>
             {% for technology in resume.technologies %}
-                <li>{{ technology }}</li>
+            <li>{{ technology }}</li>
             {%- endfor -%}
         </ul>
     </section>
     <section>
         <h2>Experience</h2>
         {% for experience in resume.experience %}
-            <h3>{{ experience.role | title }} - {{ experience.company | title }}</h3>
+        <div class="p-experience">
+            <h3>
+                {{ experience.role | title }} - {{ experience.company | title }}
+            </h3>
             <date>
                 {{ experience.startDate }}
-                {% if experience.endDate > experience.startDate %}
-                    - {{ experience.endDate }}
-                {% else %}
-                    - Present
-                {% endif %}
+                {% if experience.endDate > experience.startDate %} -
+                {{ experience.endDate }}
+                {% else %} - Present {% endif %}
             </date>
             <ul>
                 {% for highlights in experience.highlights %}
-                    <li>
-                        {{ highlights }}
-                    </li>
+                <li>
+                    {{ highlights }}
+                </li>
                 {%- endfor -%}
             </ul>
             {% for project in experience.projects %}
-                <h4>{{ project.title }}</h4>
-                <p>{{ project.description }}</p>
-                <ul>
-                    {% for details in project.details %}
-                        <li>
-                            {{ details }}
-                        </li>
-                    {%- endfor -%}
-                </ul>
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.description }}</p>
+            <ul>
+                {% for details in project.details %}
+                <li>
+                    {{ details }}
+                </li>
+                {%- endfor -%}
+            </ul>
             {%- endfor -%}
+        </div>
         {%- endfor -%}
     </section>
-    <section>
+    <section class="p-education">
         <h2>Education</h2>
         {% for education in resume.education %}
         <h3>{{ education.school }}</h3>
@@ -57,4 +64,3 @@ layout: 'base.html'
     </section>
 </article>
 {% endblock %}
-
