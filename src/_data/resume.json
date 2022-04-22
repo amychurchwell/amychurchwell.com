@@ -27,6 +27,7 @@
     "experience": [
         {
             "company": "Mozilla",
+            "companyWebsite": "https://www.mozilla.org",
             "role": "Front End Software Engineer",
             "startDate": 2018,
             "projects": [

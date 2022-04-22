@@ -6,6 +6,10 @@
     --text: #efd3d7;
 }
 
+p {
+    line-height: 2;
+}
+
 body {
     background-color: var(--background);
     color: var(--text);
@@ -22,6 +26,11 @@ body {
 
 header {
     border-bottom: 1px solid var(--text);
+    text-align: center;
+}
+
+header h1 {
+    float: left;
 }
 
 /* site navigation */
@@ -31,20 +40,41 @@ header {
     color: var(--background);
 }
 
+nav {
+    float: right;
+    text-align: left;
+    border-left: 1px solid var(--text);
+}
+
+#nav-header {
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-left: 1em;
+}
+
+nav ul {
+    padding: 0;
+}
+
 nav li::before {
     content: "\2500";
 }
 
 nav li::marker {
-    content: "\251C";
+    content: none;
 }
 
-nav li:last-child::marker {
+/* nav li:last-child::marker {
     content: "\2514";
-}
+} */
 
 a {
     color: var(--text);
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--text);
 }
 
 /*-- resume --*/
@@ -77,9 +107,9 @@ a {
 /*-- Mars Photo --*/
 
 .mars-rover table {
+    margin: 0 auto;
     max-width: 60ch;
     overflow: auto;
-    margin: 0 auto;
 }
 
 .mars-rover thead {

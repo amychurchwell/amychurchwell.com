@@ -6,7 +6,7 @@ my personal website; where I tinker with web dev stuff.
 
 ## build
 
---> requires [node](https://nodejs.org/).
+-> requires [node](https://nodejs.org/).
 
 after [cloning](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository):
 
@@ -14,7 +14,7 @@ after [cloning](https://docs.github.com/en/repositories/creating-and-managing-re
 -   `npm run build` build project
 -   `npm run serve` serve localhost
 
-you can run the tests via `npm run test`
+once I write some tests, you will be able to run them via `npm run test` :P
 
 ## various tooling
 
