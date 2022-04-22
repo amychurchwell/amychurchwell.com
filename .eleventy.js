@@ -11,11 +11,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary('md', markdownIt)
 
-    eleventyConfig.addPassthroughCopy('./src/css/')
-    eleventyConfig.addWatchTarget('./src/css/')
-
-    eleventyConfig.addPassthroughCopy('./src/img/')
-    eleventyConfig.addWatchTarget('./src/img/')
+    eleventyConfig.addPassthroughCopy('./src/assets/')
+    eleventyConfig.addWatchTarget('./src/assets/')
 
     eleventyConfig.addPairedShortcode('year', function (date) {
         const currentYear = new Date().getFullYear()

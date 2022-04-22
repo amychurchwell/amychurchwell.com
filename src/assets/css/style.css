@@ -1,13 +1,10 @@
 @import url('normalize.css');
+@import url('fontello.css');
 
 /* custom properties */
 :root {
     --background: #1f211e;
     --text: #efd3d7;
-}
-
-p {
-    line-height: 2;
 }
 
 body {
@@ -31,6 +28,36 @@ header {
 
 header h1 {
     float: left;
+}
+
+/* elements */
+
+p {
+    line-height: 2;
+}
+
+a {
+    color: var(--text);
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--text);
+}
+
+/* homepage */
+.social {
+    padding: 0;
+    text-align: center;
+}
+
+.social li {
+    display: inline-block;
+    list-style: none;
+}
+
+.social li a {
+    text-decoration: none;
 }
 
 /* site navigation */
@@ -64,20 +91,8 @@ nav li::marker {
     content: none;
 }
 
-/* nav li:last-child::marker {
-    content: "\2514";
-} */
 
-a {
-    color: var(--text);
-}
-
-hr {
-    border: none;
-    border-top: 1px dashed var(--text);
-}
-
-/*-- resume --*/
+/* resume */
 
 .technologies li {
     list-style: none;
@@ -91,7 +106,7 @@ hr {
     max-width: 50ch;
 }
 
-/*-- a11y hidden --*/
+/* a11y hidden */
 
 .visually-hidden {
     border: 0;
@@ -104,7 +119,7 @@ hr {
     width: 1px;
 }
 
-/*-- Mars Photo --*/
+/* Mars Photo */
 
 .mars-rover table {
     margin: 0 auto;
