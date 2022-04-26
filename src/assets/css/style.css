@@ -1,5 +1,4 @@
 @import url('normalize.css');
-@import url('fontello.css');
 
 /* custom properties */
 :root {
@@ -45,24 +44,9 @@ hr {
     border-top: 1px dashed var(--text);
 }
 
-/* homepage */
-.social {
-    padding: 0;
-    text-align: center;
-}
-
-.social li {
-    display: inline-block;
-    list-style: none;
-}
-
-.social li a {
-    text-decoration: none;
-}
-
 /* site navigation */
 
-[aria-current="page"] {
+[aria-current='page'] {
     background-color: var(--text);
     color: var(--background);
 }
@@ -84,13 +68,12 @@ nav ul {
 }
 
 nav li::before {
-    content: "\2500";
+    content: '\2500';
 }
 
 nav li::marker {
     content: none;
 }
-
 
 /* resume */
 
