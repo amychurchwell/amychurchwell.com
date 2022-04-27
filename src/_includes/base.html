@@ -7,6 +7,18 @@
             <h1>{{ title }}</h1>
             {% endblock %}
 
+            <div id="settings">
+                <button
+                class="theme-toggle"
+                id="theme-toggle"
+                title="Toggles light and dark theme"
+                aria-label="auto"
+                aria-live="polite"
+                >
+                {% include '../assets/img/icons/sun.svg' ignore missing %}
+                </button>
+            </div>
+
             {% block nav %}
             <nav aria-labelledby="nav-header">
                 <h2 id="nav-header">Navigation.</h2>
