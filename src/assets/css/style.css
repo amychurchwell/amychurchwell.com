@@ -160,9 +160,21 @@ nav li::marker {
 
 /* resume */
 
-.technologies li {
+#technologies li {
     list-style: none;
     display: inline-block;
+}
+
+#technologies li:not(:last-child)::after {
+    content: ',';
+}
+
+#resume section {
+    border-top: 1px solid var(--text);
+}
+
+#resume h4::before {
+    content: '> ';
 }
 
 /* a11y hidden */

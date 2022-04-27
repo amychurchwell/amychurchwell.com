@@ -12,7 +12,7 @@ layout: 'base.html'
 >
     <h1 class="p-name">{{ resume.name | title }}</h1>
     <p class="p-summary">{{ resume.description }}</p>
-    <section class="technologies">
+    <section id="technologies">
         <h2>Technologies</h2>
         <ul>
             {% for technology in resume.technologies %}
@@ -20,7 +20,7 @@ layout: 'base.html'
             {%- endfor -%}
         </ul>
     </section>
-    <section>
+    <section id="experience">
         <h2>Experience</h2>
         {% for experience in resume.experience %}
         <div class="p-experience">
@@ -50,11 +50,12 @@ layout: 'base.html'
                 </li>
                 {%- endfor -%}
             </ul>
+            <hr>
             {%- endfor -%}
         </div>
         {%- endfor -%}
     </section>
-    <section class="p-education">
+    <section id="education">
         <h2>Education</h2>
         {% for education in resume.education %}
         <h3>{{ education.school }}</h3>
