@@ -3,11 +3,11 @@
 /* custom properties */
 :root {
     --background: #1f211e;
-    --text: #efd3d7;
+    --text: #ffcfdb;
 }
 
 [data-theme='light'] {
-    --background: #efd3d7;
+    --background: #ffcfdb;
     --text: #1f211e;
 }
 
@@ -22,15 +22,7 @@ body {
     margin: 15px auto;
     max-width: 80ch;
     padding: 0 15px;
-}
-
-header {
-    border-bottom: 1px solid var(--text);
-    text-align: center;
-}
-
-header h1 {
-    float: left;
+    transition: 0.2s ease-in;
 }
 
 /* elements */
@@ -45,7 +37,19 @@ a {
 
 hr {
     border: none;
-    border-top: 1px dashed var(--text);
+    border-top: 1px solid var(--text);
+}
+
+/* header */
+
+header {
+    border-bottom: 1px solid var(--text);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header h1 {
+    text-align: left;
 }
 
 /* site navigation */
@@ -80,11 +84,6 @@ nav li::marker {
 }
 
 /* theme toggle */
-
-#settings {
-    display: inline-block;
-    margin: 0.67em 0;
-}
 
 .theme-toggle {
     --size: 2rem;
