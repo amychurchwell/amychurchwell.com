@@ -138,7 +138,7 @@ nav li::marker {
 }
 
 [data-theme='dark'] .theme-toggle svg > .moon > circle {
-    transform: translateX(-8px);
+    transform: translateX(-10px);
     transition-duration: 0.5s;
 }
 
