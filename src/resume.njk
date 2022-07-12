@@ -29,7 +29,7 @@ layout: 'base.html'
             </h3>
             <date>
                 {{ experience.startDate }}
-                {% if experience.endDate > experience.startDate %} -
+                {% if experience.endDate >= experience.startDate %} -
                 {{ experience.endDate }}
                 {% else %} - Present {% endif %}
             </date>
