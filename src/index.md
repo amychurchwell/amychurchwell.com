@@ -17,3 +17,5 @@ elsewhere:
 -   [Twitter](https://twitter.com/amychurchwell){.icon-twitter}{rel=me}
 -   [GitHub](https://github.com/amychurchwell){.icon-github-circled}{rel=me}
     {.social}
+
+{% include "tweets.html" ignore missing %}

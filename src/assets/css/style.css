@@ -55,7 +55,7 @@ ul {
 header {
     border-bottom: 1px solid var(--text);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     position: relative;
 }
 
@@ -217,7 +217,7 @@ nav li::marker {
 
 /* Mars Photo */
 
-/* .mars-rover table {
+.mars-rover table {
     margin: 0 auto;
     max-width: 60ch;
     overflow: auto;
@@ -234,4 +234,4 @@ nav li::marker {
 
 .mars-rover img {
     max-width: 100%;
-} */
+}
