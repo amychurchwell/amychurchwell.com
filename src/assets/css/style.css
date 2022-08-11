@@ -95,7 +95,7 @@ nav > ul > li {
     list-style: none;
 }
 
-nav > li::before {
+nav li::before {
     content: '\2500';
 }
 
