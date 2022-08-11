@@ -1,5 +1,11 @@
 @import url('normalize.css');
 
+/* font created by nontynet https://nonty.net/font/freefont/happy-font/ */
+@font-face {
+    font-family: 'dream';
+    src: url('../fonts/DreAm.ttf') format('truetype');
+}
+
 /* custom properties */
 :root {
     --background: #1f211e;
@@ -16,7 +22,7 @@ body {
     color: var(--text);
     display: flex;
     flex-flow: column wrap;
-    font: 0.9em monospace;
+    font: 1em monospace;
     justify-content: center;
     line-height: 1.5;
     margin: 15px auto;
@@ -40,39 +46,53 @@ hr {
     border-top: 1px solid var(--text);
 }
 
+ul {
+    padding-inline-start: 0;
+}
+
 /* header */
 
 header {
     border-bottom: 1px solid var(--text);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
 }
 
 header h1 {
+    font-family: 'dream', monospace;
     text-align: left;
+    font-size: 2.5em;
+    margin-block-end: 0;
 }
 
 /* site navigation */
 
+a:hover,
 [aria-current='page'] {
     background-color: var(--text);
     color: var(--background);
+    transition: 0.2s;
 }
 
 nav {
-    float: right;
     text-align: left;
-    border-left: 1px solid var(--text);
 }
 
 #nav-header {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: normal;
-    margin-left: 1em;
 }
 
 nav ul {
+    border-left: 1px solid var(--text);
     padding: 0;
+    margin-block-end: 0;
+    padding-block-end: 1em;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 nav li::before {
@@ -84,6 +104,12 @@ nav li::marker {
 }
 
 /* theme toggle */
+
+#settings {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 .theme-toggle {
     --size: 2rem;
@@ -191,7 +217,7 @@ nav li::marker {
 
 /* Mars Photo */
 
-.mars-rover table {
+/* .mars-rover table {
     margin: 0 auto;
     max-width: 60ch;
     overflow: auto;
@@ -208,4 +234,4 @@ nav li::marker {
 
 .mars-rover img {
     max-width: 100%;
-}
+} */
