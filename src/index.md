@@ -11,11 +11,13 @@ I work remotely in the [Pacific Northwest]{.p-region}, [U.S.A]{.p-region} as a [
 
 ---
 
-elsewhere:
+### elsewhere:
 
 -   [Mastodon](https://tech.lgbt/@amy){.icon-mastodon}{rel=me}
 -   [Twitter](https://twitter.com/amychurchwell){.icon-twitter}{rel=me}
 -   [GitHub](https://github.com/amychurchwell){.icon-github-circled}{rel=me}
     {.social}
+
+---
 
 {% include "tweets.html" ignore missing %}

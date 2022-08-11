@@ -21,30 +21,19 @@ module.exports = async () => {
         },
     }
 
-    let hasNextPage = true
-    let nextToken = null
     let userName
     console.log('Retrieving Tweets...')
 
-    while (hasNextPage) {
-        let resp = await getPage(params, options, nextToken)
-        if (
-            resp &&
-            resp.meta &&
-            resp.meta.result_count &&
-            resp.meta.result_count > 0
-        ) {
-            userName = resp.includes.users[0].username
-            if (resp.data) {
-                userTweets.push.apply(userTweets, resp.data)
-            }
-            if (resp.meta.next_token) {
-                nextToken = resp.meta.next_token
-            } else {
-                hasNextPage = false
-            }
-        } else {
-            hasNextPage = false
+    let resp = await getPage(params, options)
+    if (
+        resp &&
+        resp.meta &&
+        resp.meta.result_count &&
+        resp.meta.result_count > 0
+    ) {
+        userName = resp.includes.users[0].username
+        if (resp.data) {
+            userTweets.push.apply(userTweets, resp.data)
         }
     }
 

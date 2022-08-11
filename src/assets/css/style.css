@@ -59,7 +59,7 @@ header {
     position: relative;
 }
 
-header h1 {
+header > h1 {
     font-family: 'dream', monospace;
     text-align: left;
     font-size: 2.5em;
@@ -84,22 +84,22 @@ nav {
     font-weight: normal;
 }
 
-nav ul {
+nav > ul {
     border-left: 1px solid var(--text);
     padding: 0;
     margin-block-end: 0;
     padding-block-end: 1em;
 }
 
-nav ul li {
+nav > ul > li {
     list-style: none;
 }
 
-nav li::before {
+nav > li::before {
     content: '\2500';
 }
 
-nav li::marker {
+nav > li::marker {
     content: none;
 }
 
@@ -133,21 +133,21 @@ nav li::marker {
     }
 }
 
-.theme-toggle svg {
+.theme-toggle > svg {
     inline-size: 100%;
     block-size: 100%;
     stroke-linecap: round;
 }
 
-.theme-toggle svg > :is(.moon, .sun, .sun-beams) {
+.theme-toggle > svg > :is(.moon, .sun, .sun-beams) {
     transform-origin: center center;
 }
 
-.theme-toggle svg > :is(.moon, .sun) {
+.theme-toggle > svg > :is(.moon, .sun) {
     fill: var(--text);
 }
 
-.theme-toggle svg > :is(.sun-beams) {
+.theme-toggle > svg > :is(.sun-beams) {
     stroke: var(--text);
     stroke-width: 2px;
 }
@@ -215,9 +215,21 @@ nav li::marker {
     width: 1px;
 }
 
+/* Tweets */
+
+#tweets > ul {
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+#tweets > ul > li {
+    list-style: none;
+}
+
 /* Mars Photo */
 
-.mars-rover table {
+/* .mars-rover table {
     margin: 0 auto;
     max-width: 60ch;
     overflow: auto;
@@ -234,4 +246,4 @@ nav li::marker {
 
 .mars-rover img {
     max-width: 100%;
-}
+} */
