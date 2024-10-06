@@ -25,11 +25,6 @@ module.exports = function (eleventyConfig) {
         return collectionApi.getFilteredByGlob(['./src/*.md', './src/*.njk'])
     })
 
-    eleventyConfig.addFilter('tweetExcludeReplies', (obj) => {
-        const result = obj.filter((el) => el.text.charAt(0) !== '@')
-        return result
-    })
-
     return {
         dir: {
             input: 'src',
