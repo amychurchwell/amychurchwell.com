@@ -1,0 +1,17 @@
+---
+title: art
+layout: 'base.html'
+---
+
+{% block content %}
+<div>
+    <h2>Paintings</h2>
+    {% for painting in collections.paintings %}
+        <div class="art-piece">
+            <a href="{{ painting.filePath }}">
+                <img src="{{ painting.thumbnailPath }}" alt="{{ painting.fileName }}">
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
