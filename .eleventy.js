@@ -1,6 +1,7 @@
-const fs = require('fs')
-const path = require('path')
-const sharp = require('sharp')
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+require('dotenv').config();
 
 module.exports = function (eleventyConfig) {
     let options = {

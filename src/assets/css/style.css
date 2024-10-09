@@ -20,15 +20,28 @@
 body {
     background-color: var(--background);
     color: var(--text);
-    display: flex;
-    flex-flow: column wrap;
     font: 1em monospace;
     justify-content: center;
     line-height: 1.5;
     margin: 15px auto;
-    max-width: 80ch;
     padding: 0 15px;
     transition: 0.2s ease-in;
+    max-width: 80vw;
+}
+
+/* grid layout */
+.layout-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+}
+
+#sidebar {
+    grid-column: 1;
+}
+
+main {
+    grid-column: 2;
 }
 
 /* elements */
@@ -59,7 +72,7 @@ header {
     position: relative;
 }
 
-header > h1 {
+h1 {
     font-family: 'dream', monospace;
     text-align: left;
     font-size: 2.5em;
@@ -81,7 +94,6 @@ nav {
 
 #nav-header {
     font-size: 1em;
-    font-weight: normal;
 }
 
 nav > ul {
@@ -104,12 +116,6 @@ nav > li::marker {
 }
 
 /* theme toggle */
-
-#settings {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
 .theme-toggle {
     --size: 2rem;
@@ -215,23 +221,15 @@ nav > li::marker {
     width: 1px;
 }
 
-/* Tweets */
-
-#tweets > ul {
-    border: 1px solid var(--text);
-    border-radius: 5px;
-    padding: 0.5em;
-}
-
-#tweets > ul > li {
-    list-style: none;
-}
-
 /* Mars Photo */
 
-/* .mars-rover table {
+.mars-rover {
+    grid-column: 3;
+}
+
+.mars-rover table {
     margin: 0 auto;
-    max-width: 60ch;
+    max-width: 20em;
     overflow: auto;
 }
 
@@ -246,4 +244,4 @@ nav > li::marker {
 
 .mars-rover img {
     max-width: 100%;
-} */
+}

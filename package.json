@@ -26,7 +26,7 @@
     "homepage": "https://github.com/amychurchwell/amychurchwell.com#readme",
     "devDependencies": {
         "@11ty/eleventy": "^1.0.0",
-        "dotenv": "^16.0.0",
+        "dotenv": "^16.4.5",
         "editorconfig": "^0.15.3",
         "jasmine-core": "^4.0.1",
         "karma": "^6.3.17",
