@@ -6,7 +6,6 @@
             {% block header %}
             <h1>{{ title }}</h1>
             {% endblock %}
-            {% include "theme.html" ignore missing %}
         </header>
         <div class="layout-container">
             <section id="sidebar">
@@ -23,18 +22,14 @@
                         {%- endfor -%}
                     </ul>
                 </nav>
-                <!-- <h2 >Social Media</h2>
-                {% include "social.html" %} -->
+                {% include "theme.html" ignore missing %}
                 {% endblock %}
             </section>
             <main class="h-card">
                 {% block content %}
-                <article>
                     {{ content | safe }}
-                </article>
                 {% endblock %}
             </main>
-            {% include "mars.html" %}
         </div>
     </body>
 </html>

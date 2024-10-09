@@ -30,18 +30,27 @@ body {
 }
 
 /* grid layout */
-.layout-container {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 20px;
-}
 
-#sidebar {
-    grid-column: 1;
-}
+@media (min-width: 600px) {
+    .layout-container {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 20px;
+    }
 
-main {
-    grid-column: 2;
+    #sidebar {
+        grid-column: 1;
+    }
+
+    main {
+        display: flex;
+        grid-column: 2;
+        gap: 20px;
+    }
+
+    article {
+        flex: 1;
+    }
 }
 
 /* elements */
@@ -223,10 +232,6 @@ nav > li::marker {
 
 /* Mars Photo */
 
-.mars-rover {
-    grid-column: 3;
-}
-
 .mars-rover table {
     margin: 0 auto;
     max-width: 20em;
@@ -244,4 +249,45 @@ nav > li::marker {
 
 .mars-rover img {
     max-width: 100%;
+}
+
+/* Art */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.new-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.art-piece {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.art-piece img {
+    display: block;
+    height: auto;
+    border-radius: inherit;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
 }

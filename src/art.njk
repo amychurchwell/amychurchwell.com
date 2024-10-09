@@ -6,12 +6,19 @@ layout: 'base.html'
 {% block content %}
 <div>
     <h2>Paintings</h2>
-    {% for painting in collections.paintings %}
-        <div class="art-piece">
-            <a href="{{ painting.filePath }}">
-                <img src="{{ painting.thumbnailPath }}" alt="{{ painting.fileName }}">
-            </a>
-        </div>
-    {% endfor %}
+    <div class="gallery">
+        {% for painting in collections.paintings %}
+            <div class="art-piece">
+                <a href="{{ painting.filePath }}">
+                    <img src="{{ painting.thumbnailPath }}" alt="{{ painting.fileName }}">
+                    {% if loop.index == 1 %}
+                        <img src="/assets/img/gifs/new.gif" alt="New Icon" class="new-icon">
+                    {% endif %}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <img src="/assets/img/gifs/painting.gif" alt="animated gif">
+    <p>under construction!</p>
 </div>
 {% endblock %}

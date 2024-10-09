@@ -1,0 +1,22 @@
+---
+title: home
+layout: 'base.html'
+---
+
+{% block content %}
+
+<article>
+    <h2>hello!</h2>
+
+    <p>♡ My name is <a href="{{ site.url }}" class="p-name u-url" rel="me">Amy Churchwell</a> (<span class="p-pronoun-nominative">she</span>/<span class="p-pronoun-oblique">her</span>), welcome to my website. (Forever a work in progress.) ♡</p>
+
+    <p>I work remotely in the <span class="p-region">Pacific Northwest</span>, <span class="p-region">U.S.A</span> as a <span class="p-job-title">{{ resume.title }}</span>, which I’ve been doing professionally for approximately <span>{% year %}2018{% endyear %}</span> years.</p>
+
+    <p>I am also an artist, illustrator, and occasional mediocre banjo player.</p>
+
+    {% include "social.html" %}
+</article>
+
+{% endblock %}
+
+{% include "mars.html" %}
