@@ -230,27 +230,6 @@ nav > li::marker {
     width: 1px;
 }
 
-/* Mars Photo */
-
-.mars-rover table {
-    margin: 0 auto;
-    max-width: 20em;
-    overflow: auto;
-}
-
-.mars-rover thead {
-    background-color: var(--text);
-    color: var(--background);
-}
-
-.mars-rover tbody {
-    text-align: left;
-}
-
-.mars-rover img {
-    max-width: 100%;
-}
-
 /* Art */
 .gallery {
     display: grid;
