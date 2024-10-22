@@ -1,8 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const sharp = require('sharp');
-require('dotenv').config();
-
 module.exports = function (eleventyConfig) {
     let options = {
         html: true,
@@ -14,9 +9,10 @@ module.exports = function (eleventyConfig) {
         .use(require('markdown-it-bracketed-spans'))
         .use(require('markdown-it-attrs'))
 
-    eleventyConfig.setLibrary('md', markdownIt);
+    eleventyConfig.setLibrary('md', markdownIt)
 
-    eleventyConfig.addWatchTarget('./src/assets/');
+    eleventyConfig.addPassthroughCopy('./src/assets/')
+    eleventyConfig.addWatchTarget('./src/assets/')
 
     eleventyConfig.addPairedShortcode('year', function (date) {
         const currentYear = new Date().getFullYear()
