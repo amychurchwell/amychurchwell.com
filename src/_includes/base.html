@@ -2,34 +2,8 @@
 <html lang="en">
     {% include "head.html" %}
     <body>
-        <header>
-            {% block header %}
-            <h1>{{ title }}</h1>
-            {% endblock %}
-        </header>
         <div class="layout-container">
-            <section id="sidebar">
-                {% block nav %}
-                <nav aria-labelledby="nav-header">
-                    <h2 id="nav-header">Navigation.</h2>
-                    <ul>
-                        {%- for webpage in collections.navigation -%}
-                        <li>
-                            <a href="{{ webpage.url | url }}" {% if page.url == webpage.url %} aria-current="page"{% endif %}>
-                                {{ webpage.data.title }}
-                            </a>
-                        </li>
-                        {%- endfor -%}
-                    </ul>
-                </nav>
-                {% include "theme.html" ignore missing %}
-                {% endblock %}
-            </section>
-            <main class="h-card">
-                {% block content %}
-                    {{ content | safe }}
-                {% endblock %}
-            </main>
+            <h1>Coming soon!</h1>
         </div>
     </body>
 </html>
