@@ -22,7 +22,9 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addCollection('navigation', function (collectionApi) {
-        return collectionApi.getFilteredByGlob(['./src/*.md', './src/*.njk'])
+        return collectionApi
+            .getFilteredByGlob(['./src/*.md', './src/*.njk'])
+            .filter((item) => !item.data.excludeFromNavigation)
     })
 
     return {

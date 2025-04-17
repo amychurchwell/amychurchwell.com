@@ -1,0 +1,5 @@
+{% macro iconLink(name, href, label) %}
+  <a href="{{ href }}" rel="me" aria-label="{{ label }}">
+    {% include "../assets/img/icons/" + name + ".svg" %}
+  </a>
+{% endmacro %}

@@ -1,0 +1,28 @@
+---
+title: Links
+excludeFromNavigation: true
+permalink: /links/
+links:
+  - title: "The Role We Play – Crucical Comix"
+    url: "https://www.crucialcomix.com/comic/the-role-we-play/"
+  - title: "SOLRAD Presents: Tales from Gulf Breeze & Pensacola"
+    url: "https://solrad.co/solrad-presents-tales-from-gulf-breeze-pensacola"
+---
+
+{% include "head.html" %}
+{% block content %}
+    <p>icon</p>
+    <h2>{{ title }}</h2>
+    {% include "social.html" %}
+    <article>
+        <ul>
+        {% for link in links %}
+            <li>
+                <a href="{{ link.url }}" class="link-button" target="_blank" rel="noopener">
+                <span>{{ link.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </article>
+{% endblock %}
