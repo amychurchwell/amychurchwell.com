@@ -2,17 +2,11 @@
 <html lang="en">
     {% include "head.html" %}
     <body>
-        <header>
-            <!-- {% block header %}
-            <h1>{{ title }}</h1>
-            {% endblock %} -->
-        </header>
         <div class="layout-container">
-            <section id="sidebar">
-                <!-- {% include "theme.html" ignore missing %} -->
-                <!-- {% block nav %}
+            <header>
+                <h1>Amy Churchwell</h1>
+                {% block nav %}
                 <nav aria-labelledby="nav-header">
-                    <h2 id="nav-header">Navigation.</h2>
                     <ul>
                         {%- for webpage in collections.navigation -%}
                         <li>
@@ -23,9 +17,12 @@
                         {%- endfor -%}
                     </ul>
                 </nav>
-                {% endblock %} -->
-            </section>
-            <main class="h-card">
+                {% endblock %}
+            </header>
+            <main>
+                {% block header %}
+                <h2>Hello</h2>
+                {% endblock %}
                 {% block content %}
                     {{ content | safe }}
                 {% endblock %}
