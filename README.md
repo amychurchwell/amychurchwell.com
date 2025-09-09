@@ -1,11 +1,12 @@
- ┌────────────── ∘°∘♡∘°∘ ──────────────┐
-    my personal website;
+∘°∘♡∘°∘
 
-    this is a place where I can tinker
-    with web dev stuff and have a home
-    for my art.
+# personal website
 
- └────────────── °∘∘♡∘∘° ──────────────┘
+this is a place where I can tinker
+with web dev stuff and have a home
+for my art.
+
+---
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1747335f-f0d4-4c34-8113-855c4627ae35/deploy-status)](https://app.netlify.com/sites/amychurchwell/deploys)
 

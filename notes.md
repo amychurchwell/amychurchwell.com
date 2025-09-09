@@ -14,3 +14,5 @@
 ## coding work
 - responsive hamburger nav
 - message form (?)
+- thumnails
+- click through display

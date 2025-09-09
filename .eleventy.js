@@ -1,3 +1,6 @@
+const path = require('path')
+const fg = require('fast-glob')
+
 module.exports = function (eleventyConfig) {
     let options = {
         html: true,
@@ -25,6 +28,30 @@ module.exports = function (eleventyConfig) {
         return collectionApi
             .getFilteredByGlob(['./src/*.md', './src/*.njk'])
             .filter((item) => !item.data.excludeFromNavigation)
+    })
+
+    eleventyConfig.addGlobalData('paintings', () => {
+
+        const paintings = fg.sync([
+            'src/assets/artwork/paintings/**/*.{jpg,jpeg,png,gif,webp,avif,svg}',
+        ])
+
+        const items = paintings.map((absPath) => {
+            const relFromSrc = absPath.replace(/^src[\\/]/, '') // e.g. "assets/..."
+            const url = '/' + relFromSrc.replace(/\\/g, '/')
+            const filename = path.basename(absPath, path.extname(absPath))
+            const alt = filename.replace(/[-_]+/g, ' ').trim()
+            return { src: url, alt, filename }
+        })
+
+        items.sort((a, b) =>
+            a.filename.localeCompare(b.filename, undefined, {
+                numeric: true,
+                sensitivity: 'base',
+            })
+        )
+
+        return items
     })
 
     return {

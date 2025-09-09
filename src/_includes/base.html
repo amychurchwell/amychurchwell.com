@@ -2,9 +2,14 @@
 <html lang="en">
     {% include "head.html" %}
     <body>
+        <header>
+            {% block header %}
+            <h1>Amy Churchwell</h1>
+            {% endblock %}
+        </header>
         <div class="layout-container">
-            <header>
-                <h1>Amy Churchwell</h1>
+            <section id="sidebar">
+                <!-- {% include "theme.html" ignore missing %} -->
                 {% block nav %}
                 <nav aria-labelledby="nav-header">
                     <ul>
@@ -16,13 +21,11 @@
                         </li>
                         {%- endfor -%}
                     </ul>
+                    {% include "social.html" %}
                 </nav>
                 {% endblock %}
-            </header>
+            </section>
             <main>
-                {% block header %}
-                <h2>Hello</h2>
-                {% endblock %}
                 {% block content %}
                     {{ content | safe }}
                 {% endblock %}
