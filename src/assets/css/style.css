@@ -102,10 +102,6 @@ nav > li::marker {
     justify-content: center;
 }
 
-#sidebar {
-    display: none;
-}
-
 /* about */
 
 .about {
@@ -124,26 +120,13 @@ nav > li::marker {
     width: 200px;
 }
 
-.sticker {
-    position: absolute;
-}
-
-.rainbow {
-    right: 0;
-    top: -20px;
-    width: 100px;
-}
-
-.star {
-    top: -40px;
-    right: 120px;
-    width: 50px;
-}
-
 #self-portrait {
-    mix-blend-mode: multiply;
     width: 200px;
     margin: 0 auto;
+}
+
+[data-theme='dark'] #self-portrait {
+    filter: invert(100);
 }
 
 @media (min-width: 768px) {
@@ -157,7 +140,7 @@ nav > li::marker {
 /* theme toggle */
 
 .theme-toggle {
-    --size: 2rem;
+    --size: 20px;
     -webkit-tap-highlight-color: transparent;
     aspect-ratio: 1;
     background: none;
