@@ -12,7 +12,7 @@ for my art.
 
 ## build
 
--> requires [node](https://nodejs.org/).
+→ requires [node](https://nodejs.org/).
 
 after [cloning](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository):
 

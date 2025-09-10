@@ -12,7 +12,13 @@
 - blog
 
 ## coding work
+- indieweb
 - responsive hamburger nav
 - message form (?)
-- thumnails
+- thumbnails
 - click through display
+- lazy loading
+
+## research
+- open source web analytics:
+    - Plausible

@@ -1,0 +1,38 @@
+---
+title: home
+layout: 'base.html'
+permalink: /paintings
+excludeFromNavigation: true
+---
+
+{% block content %}
+    <article>
+        <h2>hello</h2>
+        <p>
+            <a href="{{ site.url }}" class="p-name u-url" rel="me">Amy Churchwell</a>
+            (<span class="p-pronoun-nominative">she</span>/<span class="p-pronoun-oblique">her</span>)
+            is an artist based in the
+            <span class="p-region">Pacific Northwest</span>,
+            <span class="p-region">U.S.A</span>.
+        </p>
+        <p>
+            Say hello at
+            <strong>
+                <a rel="me" href="mailto:hello@amychurchwell.com">hello@amychurchwell.com</a>
+            </strong>
+        </p>
+    </article>
+    <article>
+        <ul class="gallery">
+            {% for img in paintings %}
+                <li>
+                    <figure>
+                        <img
+                        src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy" decoding="async"/>
+                    {# <figcaption>{{ img.alt }}</figcaption> #}
+                    </figure>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock %}

@@ -10,7 +10,8 @@
 :root {
     --background: #1f211e;
     --text: rgb(218, 208, 240);
-    --highlight: #dbf4a7;
+    /* --highlight: #dbf4a7;
+    TODO: dark theme highlight */
 }
 
 [data-theme='light'] {
@@ -27,6 +28,7 @@ body {
     line-height: 1.5;
     margin: 0 auto;
     transition: 0.2s ease-in;
+    height: 100vh;
 }
 
 /* elements */
@@ -51,6 +53,8 @@ ul {
 /* header */
 
 header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 2em 0.5em;
     position: relative;
 }
@@ -94,8 +98,12 @@ nav > li::marker {
 /* site nav: sidebar */
 
 .layout-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar {
+    display: none;
 }
 
 /* about */
@@ -109,6 +117,11 @@ nav > li::marker {
     .about {
         max-width: 50vw;
     }
+}
+
+.about figure {
+    margin: 1em auto;
+    width: 200px;
 }
 
 .sticker {
@@ -127,6 +140,12 @@ nav > li::marker {
     width: 50px;
 }
 
+#self-portrait {
+    mix-blend-mode: multiply;
+    width: 200px;
+    margin: 0 auto;
+}
+
 @media (min-width: 768px) {
     .star {
         width: 50px;
@@ -140,7 +159,6 @@ nav > li::marker {
 .theme-toggle {
     --size: 2rem;
     -webkit-tap-highlight-color: transparent;
-
     aspect-ratio: 1;
     background: none;
     block-size: var(--size);
@@ -148,6 +166,7 @@ nav > li::marker {
     border: none;
     cursor: pointer;
     inline-size: var(--size);
+    margin-inline-start: 1em;
     outline-offset: 5px;
     padding: 0;
     touch-action: manipulation;
@@ -243,7 +262,7 @@ nav > li::marker {
 
 /* Social */
 .social-icons {
-    margin: 1em;
+    text-align: right;
 
     li {
         display: inline-block;

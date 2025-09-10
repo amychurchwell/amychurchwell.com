@@ -5,6 +5,7 @@
         <header>
             {% block header %}
             <h1>Amy Churchwell</h1>
+            {% include "social.html" %}
             {% endblock %}
         </header>
         <div class="layout-container">
@@ -21,7 +22,6 @@
                         </li>
                         {%- endfor -%}
                     </ul>
-                    {% include "social.html" %}
                 </nav>
                 {% endblock %}
             </section>
