@@ -10,15 +10,17 @@
 ### maybe
 - shop
 - blog
+- report a bug
 
 ## coding work
 - indieweb
 - responsive hamburger nav
-- message form (?)
 - thumbnails
 - click through display
 - lazy loading
+- newsletter (?)
 
 ## research
 - open source web analytics:
     - Plausible
+    - Matomo

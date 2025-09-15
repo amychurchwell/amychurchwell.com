@@ -6,18 +6,11 @@
     src: url('../fonts/DreAm.ttf') format('truetype');
 }
 
-/* custom properties */
 :root {
-    --background: #1f211e;
-    --text: rgb(218, 208, 240);
-    /* --highlight: #dbf4a7;
-    TODO: dark theme highlight */
-}
-
-[data-theme='light'] {
-    --background: rgb(218, 208, 240);
-    --text: #1f211e;
+    --background: #fff9f1;
+    --text: #2b2b23;
     --highlight: #dbf4a7;
+    --secondary: #d3c1cd;
 }
 
 body {
@@ -29,6 +22,10 @@ body {
     margin: 0 auto;
     transition: 0.2s ease-in;
     height: 100vh;
+}
+
+main {
+    width: 100%;
 }
 
 /* elements */
@@ -70,7 +67,8 @@ h2 {
     font-family: 'dream', monospace;
     font-size: 2em;
     line-height: 1;
-    margin-block-end: 0;
+    text-align: center;
+    margin: 0;
 }
 
 /* site navigation */
@@ -95,18 +93,12 @@ nav > li::marker {
     content: none;
 }
 
-/* site nav: sidebar */
-
-.layout-container {
-    display: flex;
-    justify-content: center;
-}
-
 /* about */
 
 .about {
     padding: 0.5em 1em;
     position: relative;
+    margin: 1em auto;
 }
 
 @media (min-width: 600px) {
@@ -125,9 +117,9 @@ nav > li::marker {
     margin: 0 auto;
 }
 
-[data-theme='dark'] #self-portrait {
+/* [data-theme='dark'] #self-portrait {
     filter: invert(100);
-}
+} */
 
 @media (min-width: 768px) {
     .star {
@@ -242,6 +234,66 @@ nav > li::marker {
     position: absolute;
     width: 1px;
 }
+
+/* contact form */
+.contact {
+    background: var(--secondary);
+    width: 100%;
+    padding: 1em 0 2em;
+}
+
+form {
+    max-width: 500px;
+    margin: 1em auto;
+    padding: 1.5rem;
+    border: 1px dotted var(--text);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    color: var(--text);
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: 1em monospace;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--highlight);
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    color: var(--background);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid #ccc;
+    background: var(--text);
+}
+
+form button:hover {
+    background: var(--secondary);
+}
+
+/* theme toggle */
 
 /* Social */
 .social-icons {
