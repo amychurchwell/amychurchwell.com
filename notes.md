@@ -6,10 +6,7 @@
 - illustration
 - paintings
 - comics
-
-### maybe
 - shop
-- blog
 - report a bug
 
 ## coding work
@@ -20,7 +17,13 @@
 - lazy loading
 - newsletter (?)
 
+### for fun
+- weather
+- currently reading
+
 ## research
-- open source web analytics:
+- open source web analytics*
     - Plausible
     - Matomo
+
+_* do I care? what does this info serve?_

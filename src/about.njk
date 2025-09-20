@@ -1,27 +1,11 @@
 ---
-title: about
+title: about/contact
 layout: 'base.html'
-permalink: /
-excludeFromNavigation: true
+eleventyExcludeFromCollections: true
 ---
 
 {% block content %}
-    <article class="about">
-        <p>
-            <figure>
-                <img src="../assets/img/tired-drawing.png" alt="a doodle self portrait" id="self-portrait"/>
-            </figure>
-            <a href="{{ site.url }}" class="p-name u-url" rel="me">Amy Churchwell</a>
-            (<span class="p-pronoun-nominative">she</span>/<span class="p-pronoun-oblique">her</span>)
-                            is a cartoonist, illustrator, and artist based in Portland, Oregon.
-        </p>
-    </article>
-    <section
-        class="contact">
-        {# <img src="../assets/img/mail.gif" alt=""/>
-                            <strong>
-                                <a href="mailto:hello@amychurchwell.com">hello@amychurchwell.com</a>
-                            </strong> #}
+    <section>
         {% include "contact.html" %}
     </section>
 {% endblock %}

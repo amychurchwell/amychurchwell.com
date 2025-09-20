@@ -1,0 +1,21 @@
+---
+title: home
+layout: 'base.html'
+permalink: /
+eleventyExcludeFromCollections: true
+---
+
+{% block content %}
+    <article class="about">
+        <figure>
+            <img src="../assets/img/tired-drawing.png" alt="a doodle self portrait" id="self-portrait"/>
+        </figure>
+        <p>
+            Amy Churchwell (<span class="p-pronoun-nominative">she</span>/<span class="p-pronoun-oblique">her</span>) is a cartoonist, illustrator, and artist based in Portland, Oregon.
+        </p>
+        <p>
+            Get in touch at: hello[at]amychurchwell.com
+        </p>
+        {% include "social.html" %}
+    </article>
+{% endblock %}
