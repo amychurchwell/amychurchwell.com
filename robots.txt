@@ -1,4 +1,0 @@
-Sitemap: https://www.amychurchwell.com/sitemap.xml
-
-User-agent: *
-Disallow:

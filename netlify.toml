@@ -1,6 +1,0 @@
-[build]
-  command = "npm install --arch=x64 --platform=linux sharp && npm run build"
-  publish = "_site"
-
-[context.production.environment]
-  NODE_VERSION = "18.17.0"
